@@ -14,6 +14,10 @@
   align-items: center;
   color: #fff;
 }
+.navBrand{
+  transform: rotate(90deg);
+  font-size: 20px;
+}
 .mobileNav {
   display: none;
   flex-direction: column;
