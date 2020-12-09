@@ -1,8 +1,8 @@
 import Head from "next/head";
 import { useState } from "react";
 import styles from "../styles/Home.module.css";
-import { ContactForm } from "./contactform";
-import { Mobilenav } from "./mobileNav";
+import { ContactForm } from "../component/contactform";
+import { Mobilenav } from "../component/mobileNav";
 
 export default function Home() {
   const [contactForm, setcontactForm] = useState(false);
@@ -56,7 +56,7 @@ export default function Home() {
             <header className={styles.heroHeader}>
               <h1>I am Sagar Giri</h1>
             </header>
-            {console.log(contactForm)}
+           
             <p>A passionate developer from Nepal</p>
             <button
               className={styles.contactButton}
