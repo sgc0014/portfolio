@@ -1,0 +1,31 @@
+
+
+.navList{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.navItem{
+    margin-bottom: 20px;
+    color: #a2a2a2;
+    letter-spacing: .5px;
+    cursor: pointer;
+}
+.navItem:first-of-type{
+    color: #e23939;
+}
+
+.close {
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    font-size: 40px;
+    transform: rotate(45deg);
+    color: #a0b5e4;
+    cursor: pointer;
+    font-weight: 300;
+    transition: 2s;
+  }

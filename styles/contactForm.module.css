@@ -1,0 +1,116 @@
+.formMask {
+  width: 231px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(90deg);
+  margin-left: -23px;
+}
+.close {
+  position: absolute;
+  right: 12%;
+  font-size: 27px;
+  transform: rotate(45deg);
+  color: #b5b3b3;
+  cursor: pointer;
+}
+.formHeader > h1 {
+  font-size: 50px;
+  margin-bottom: 11px;
+}
+.formHeader > p {
+  color: #1b2025;
+  margin-bottom: 33px;
+  font-size: 13px;
+  margin-top: 3px;
+}
+
+.form {
+  max-width: 450px;
+  margin: 0 auto;
+}
+.formGroup {
+  margin-bottom: 33px;
+  position: relative;
+}
+.label {
+  position: absolute;
+  transition: all 0.3s;
+  color: #757c98;
+  top: 0px;
+  pointer-events: none;
+}
+.txtareaLabel {
+  position: absolute;
+  top: -0px;
+  transition: all 0.3s;
+  color: #757c98;
+  pointer-events: none;
+}
+.input {
+  height: 32px;
+  border: none;
+  border-bottom: 1px solid #d4d2d2;
+  width: 100%;
+  outline: none;
+  color: #1b2025;
+  background: transparent;
+}
+.textarea {
+  height: 100px;
+  border: none;
+  border-bottom: 1px solid #d4d2d2;
+  width: 100%;
+  outline: none;
+  color: #1b2025;
+  background: transparent;
+}
+.input:focus,
+.textarea:focus {
+  border-bottom: 1px solid #1b2025;
+}
+.input:focus + .label,
+.input:valid + .label {
+  top: -15px;
+  transition: all 0.3s;
+}
+.textarea:focus + .txtareaLabel,
+.textarea:valid + .txtareaLabel {
+  top: -17px;
+  transition: all 0.3s;
+}
+
+.submitBtn {
+  background-color: #ef4b6c;
+  width: 100%;
+  height: 56px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  border-radius: 28px;
+  line-height: 30px;
+  text-align: center;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 730px) {
+  .formMask {
+    width: 107px;
+  }
+  .formContainer {
+    border-radius: 0;
+  }
+  .close {
+    top: 3%;
+    right: 5%;
+  }
+  .formHeader > h1 {
+    font-size: 45px;
+  }
+  .formHeader > p {
+    font-size: 13px;
+  }
+}
