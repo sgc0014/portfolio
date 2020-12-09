@@ -9,13 +9,13 @@
 }
 
 .navItem{
-    margin-bottom: 20px;
-    color: #a2a2a2;
-    letter-spacing: .5px;
-    cursor: pointer;
+    margin-bottom: 25px;
+    color: #969595;
+    letter-spacing: 1px;
+    cursor: pointer
 }
 .navItem:first-of-type{
-    color: #e23939;
+    color: #dc2d2d;
 }
 
 .close {

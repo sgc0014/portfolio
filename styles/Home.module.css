@@ -44,7 +44,7 @@
 }
 .navItem {
   font-size: 13px;
-  font-weight: 600;
+  letter-spacing: .5px;
   cursor: pointer;
 }
 
@@ -414,6 +414,9 @@
   .projectList{
     flex-direction: column;
     align-items: center;
+  }
+  .projectImg{
+    max-height: 414px;
   }
 }
 @media only screen and (max-width: 850px) {
