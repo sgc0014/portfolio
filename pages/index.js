@@ -117,7 +117,7 @@ export default function Home() {
 
           <div className={styles.projectList}>
             <div className={styles.project}>
-              <a href="#" className={styles.projectDetailLink}>
+              <a href="https://github.com/sgc0014/sblog" className={styles.projectDetailLink}>
                 <img className={styles.projectImg} src="/project-1.jpg" />
                 <button className={styles.projectButton}>
                   Learn More &#x2192;
@@ -125,7 +125,7 @@ export default function Home() {
               </a>
             </div>
             <div className={styles.project}>
-              <a href="#" className={styles.projectDetailLink}>
+              <a href="https://github.com/sgc0014/eshop" className={styles.projectDetailLink}>
                 <img className={styles.projectImg} src="/project-2.png" />
                 <button className={styles.projectButton}>
                   Learn More &#x2192;
@@ -133,7 +133,7 @@ export default function Home() {
               </a>
             </div>
             <div className={styles.project}>
-              <a href="#" className={styles.projectDetailLink}>
+              <a href="https://www.icaccm.com/" className={styles.projectDetailLink}>
                 <img className={styles.projectImg} src="/project-3.png" />
                 <button className={styles.projectButton}>
                   Learn More &#x2192;
@@ -141,7 +141,7 @@ export default function Home() {
               </a>
             </div>
             <div className={styles.project}>
-              <a href="#" className={styles.projectDetailLink}>
+              <a href="https://github.com/sgc0014/instaclone" className={styles.projectDetailLink}>
                 <img className={styles.projectImg} src="/project-4.png" />
                 <button className={styles.projectButton}>
                   Learn More &#x2192;
