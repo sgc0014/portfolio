@@ -74,6 +74,7 @@ export function ContactForm(props) {
             background: rgba(0, 0, 0, 0.9);
             opacity: 1;
             transition: all 0.5s;
+            overflow-y:auto;
           }
           .formContainerShow {
             transform: translateY(0) !important;
@@ -86,9 +87,10 @@ export function ContactForm(props) {
             margin: 0 auto;
             padding: 62px 20px;
             border-radius: 1px 91px 1px 91px;
-            height: 100vh;
+            min-height: 100vh;
             transform: translateY(-100%);
             transition: all 0.5s;
+           
           }
           @media only screen and (max-width: 730px) {
             .formContainer {
