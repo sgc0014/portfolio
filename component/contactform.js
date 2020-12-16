@@ -63,19 +63,19 @@ export function ContactForm(props) {
               </p>
             </header>
             <div className={styles.formGroup}>
-              <input className={styles.input} required={true}></input>
+              <input className={styles.input} required={true} name="name"></input>
               <div className={styles.label}>Name</div>
             </div>
             <div className={styles.formGroup}>
-              <input className={styles.input} required={true}></input>
+              <input className={styles.input} required={true} name="email"></input>
               <div className={styles.label}>Email</div>
             </div>
             <div className={styles.formGroup}>
-              <input className={styles.input} required={true}></input>
+              <input className={styles.input} required={true} name="subject"></input>
               <div className={styles.label}>Subject</div>
             </div>
             <div className={styles.formGroup} style={{ marginTop: "43px" }}>
-              <textarea className={styles.textarea} required={true}></textarea>
+              <textarea className={styles.textarea} required={true} name="message"></textarea>
               <div className={styles.txtareaLabel}>Message</div>
             </div>
             {loading? <div className="msg">Loading...</div> : ""}
