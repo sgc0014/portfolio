@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import emailjs from "emailjs-com";
 import useOuterClick from "../utils/useOuterClick";
 import styles from "../styles/contactForm.module.css";
 export function ContactForm(props) {
@@ -7,6 +8,33 @@ export function ContactForm(props) {
       props.toggleForm();
     }
   });
+  const [loading, setloading] = useState(false);
+  const [success, setsuccess] = useState("");
+  const [error, seterror] = useState("");
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    setloading(true);
+    seterror("");
+    setsuccess("");
+    emailjs
+      .sendForm(
+        "service_86k6hq1",
+        "template_9p6c4ri",
+        e.target,
+        "user_B1pHC0qhEjTIVdcOJjo2f"
+      )
+      .then(
+        (result) => {
+          setloading(false);
+          setsuccess(result.text);
+        },
+        (error) => {
+          setloading(false);
+          seterror(error.text);
+        }
+      );
+  };
   return (
     <>
       <div
@@ -25,7 +53,7 @@ export function ContactForm(props) {
           <span className={styles.close} onClick={() => props.toggleForm()}>
             +
           </span>
-          <form className={styles.form}>
+          <form className={styles.form} onSubmit={handleFormSubmit}>
             <header className={styles.formHeader}>
               <h1>Lets Talk!</h1>
               <p>
@@ -50,8 +78,13 @@ export function ContactForm(props) {
               <textarea className={styles.textarea} required={true}></textarea>
               <div className={styles.txtareaLabel}>Message</div>
             </div>
+            {loading? <div className="msg">Loading...</div> : ""}
+            {success ? <div className="msg green">Successful</div> : ""}
+            {error ? <div className="msg red">Failed. Try again.</div> : ""}
 
-            <button className={styles.submitBtn}>Send</button>
+            <button className={styles.submitBtn} type="submit" disabled={loading} >
+              Send
+            </button>
           </form>
           <img className={styles.formMask} src="/1.png" />
         </div>
@@ -65,7 +98,7 @@ export function ContactForm(props) {
             left: 0;
             right: 0;
             opacity: 0;
-            transition: all .5s;
+            transition: all 0.5s;
             z-index: -99;
           }
 
@@ -74,11 +107,11 @@ export function ContactForm(props) {
             background: rgba(0, 0, 0, 0.9);
             opacity: 1;
             transition: all 0.5s;
-            overflow-y:auto;
+            overflow-y: auto;
           }
           .formContainerShow {
             transform: translateY(0) !important;
-            transition: all .5s;
+            transition: all 0.5s;
           }
           .formContainer {
             position: relative;
@@ -90,7 +123,16 @@ export function ContactForm(props) {
             min-height: 100vh;
             transform: translateY(-100%);
             transition: all 0.5s;
-           
+          }
+          .msg {
+            text-align: center;
+            padding-bottom: 6px;
+          }
+          .red {
+            color: #ff0000;
+          }
+          .green {
+            color: #009e00;
           }
           @media only screen and (max-width: 730px) {
             .formContainer {
