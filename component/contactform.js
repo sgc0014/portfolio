@@ -17,6 +17,7 @@ export function ContactForm(props) {
     setloading(true);
     seterror("");
     setsuccess("");
+    console.log("hello",e.target)
     emailjs
       .sendForm(
         "service_86k6hq1",
@@ -24,6 +25,7 @@ export function ContactForm(props) {
         e.target,
         "user_B1pHC0qhEjTIVdcOJjo2f"
       )
+     
       .then(
         (result) => {
           setloading(false);
@@ -53,7 +55,7 @@ export function ContactForm(props) {
           <span className={styles.close} onClick={() => props.toggleForm()}>
             +
           </span>
-          <form className={styles.form} >
+          <form className={styles.form} onSubmit={(e) => handleFormSubmit(e)} >
             <header className={styles.formHeader}>
               <h1>Lets Talk!</h1>
               <p>
@@ -82,7 +84,7 @@ export function ContactForm(props) {
             {success ? <div className="msg green">Successful</div> : ""}
             {error ? <div className="msg red">Failed. Try again.</div> : ""}
 
-            <button className={styles.submitBtn} type="submit" disabled={loading} onClick={(e) => (handleFormSubmit(e))} >
+            <button className={styles.submitBtn} type="submit" disabled={loading}  >
               Send
             </button>
           </form>
