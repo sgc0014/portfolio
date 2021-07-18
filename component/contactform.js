@@ -17,7 +17,7 @@ export function ContactForm(props) {
     setloading(true);
     seterror("");
     setsuccess("");
-    
+    console.log(e.target)
     emailjs
       .sendForm(
         "service_86k6hq1",
@@ -32,6 +32,7 @@ export function ContactForm(props) {
           setsuccess(result.text);
         },
         (error) => {
+          
           setloading(false);
           seterror(error.text);
         }
